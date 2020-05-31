@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<FreeSoft xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>RarArchiver</Name>
+  <Creator>RarLabs</Creator>
+  <Availability>true</Availability>
+</FreeSoft><?xml version="1.0"?>
+<Shareware xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>GettTaxi</Name>
+  <Creator>GettCompany</Creator>
+  <Availability>false</Availability>
+  <InstallDate>2019-01-21T00:00:00</InstallDate>
+  <FreeLicenseDays>30</FreeLicenseDays>
+</Shareware><?xml version="1.0"?>
+<CommercialSoft xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Vegas Pro 15</Name>
+  <Creator>Sony</Creator>
+  <Availability>false</Availability>
+  <InstallDate>2020-05-30T00:00:00</InstallDate>
+  <LicenseDays>365</LicenseDays>
+  <Price>15000.9</Price>
+</CommercialSoft><?xml version="1.0"?>
+<FreeSoft xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>KeKompas</Name>
+  <Creator>Overpass Inc.</Creator>
+  <Availability>true</Availability>
+</FreeSoft>

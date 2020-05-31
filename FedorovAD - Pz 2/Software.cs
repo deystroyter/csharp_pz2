@@ -1,25 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace FedorovAD___Pz_2
 {
-    abstract class Software
+    [Serializable]
+    public abstract class Software
     {
         /// <summary>
         /// Название программного обеспечения
         /// </summary>
-        protected string Name;
+        public string Name;
         /// <summary>
         /// Издатель программного обеспечения
         /// </summary>
-        protected string Creator;
+        public string Creator;
         /// <summary>
         /// Доступность программного обеспечения
         /// </summary>
-        protected bool Availability;
+        public bool Availability;
         /// <summary>
         /// Получить информацию об ПО
         /// </summary>
@@ -32,41 +35,53 @@ namespace FedorovAD___Pz_2
     /// <summary>
     /// Класс для бесплатного ПО
     /// </summary>
-    class FreeSoft : Software
+    [Serializable]
+    public class FreeSoft : Software
     {
         /// <summary>
         /// Конструктор класса FreeSoft
         /// </summary>
-        public FreeSoft(string SoftName,string SoftCreator)
+        public FreeSoft(string SoftName, string SoftCreator)
         {
             Name = SoftName;
             Creator = SoftCreator;
             Availability = true;
 
         }
+        /// <summary>
+        /// Конструктор класса FreeSoft без параметров
+        /// </summary>
+        public FreeSoft()
+        {
+
+        }
+
         public override void GetInfo()
         {
+            Trace.WriteLine("Вызван метод FreeSoft.GetInfo()...");
             Console.WriteLine($"Название ПО: {Name}");
             Console.WriteLine($"Издатель: {Creator}");
         }
         public override bool GetAvailability()
         {
+            Trace.WriteLine("Вызван метод FreeSoft.GetAvailability()...");
             return Availability;
         }
     }
     /// <summary>
     /// Класс для условно-бесплатного ПО
     /// </summary>
-    class Shareware : Software
+    [Serializable]
+    public class Shareware : Software
     {
         /// <summary>
         /// Дата установки ПО
         /// </summary>
-        DateTime InstallDate;
+        public DateTime InstallDate;
         /// <summary>
         /// Дней бесплатной лицензии
         /// </summary>
-        uint FreeLicenseDays;
+        public uint FreeLicenseDays;
         /// <summary>
         /// Конструктор класса Shareware
         /// </summary>
@@ -76,10 +91,17 @@ namespace FedorovAD___Pz_2
             Creator = SoftCreator;
             InstallDate = SoftInstallDate;
             FreeLicenseDays = SoftDays;
+        }
+        /// <summary>
+        /// Конструктор класса Shareware без параметров
+        /// </summary>
+        public Shareware()
+        {
 
         }
         public override void GetInfo()
         {
+            Trace.WriteLine("Вызван метод Shareware.GetInfo()...");
             Console.WriteLine($"Название ПО: {Name}");
             Console.WriteLine($"Издатель: {Creator}");
             Console.WriteLine($"Дата установки: {InstallDate}");
@@ -87,6 +109,7 @@ namespace FedorovAD___Pz_2
         }
         public override bool GetAvailability()
         {
+            Trace.WriteLine("Вызван метод Shareware.GetAvailability()...");
             if (InstallDate.AddDays(FreeLicenseDays) < DateTime.Now)
             { 
                 Availability = false;
@@ -103,21 +126,27 @@ namespace FedorovAD___Pz_2
     /// <summary>
     /// Класс для платного ПО
     /// </summary>
-    class CommercialSoft : Software
+    [Serializable]
+    public class CommercialSoft : Software
     {
         /// <summary>
         /// Дата установки ПО
         /// </summary>
-        DateTime InstallDate;
+        public DateTime InstallDate;
+
         /// <summary>
         /// Дней лицензии
         /// </summary>
-        uint LicenseDays;
+        public uint LicenseDays;
+
         /// <summary>
         /// Цена
         /// </summary>
-        float Price;
+        public float Price;
 
+        /// <summary>
+        /// Конструктор класса CommercialSoft
+        /// </summary>
         public CommercialSoft(string SoftName, string SoftCreator, float SoftPrice, DateTime SoftInstallDate, uint SoftDays)
         {
             Name = SoftName;
@@ -126,8 +155,17 @@ namespace FedorovAD___Pz_2
             InstallDate = SoftInstallDate;
             LicenseDays = SoftDays;
         }
+        /// <summary>
+        /// Конструктор класса CommercialSoft без параметров
+        /// </summary>
+        public CommercialSoft()
+        {
+
+        }
+
         public override void GetInfo()
         {
+            Trace.WriteLine("Вызван метод CommercialSoft.GetInfo()...");
             Console.WriteLine($"Название ПО: {Name}");
             Console.WriteLine($"Издатель: {Creator}");
             Console.WriteLine($"Цена: {Price}");
@@ -136,6 +174,7 @@ namespace FedorovAD___Pz_2
         }
         public override bool GetAvailability()
         {
+            Trace.WriteLine("Вызван метод Shareware.GetAvailability()...");
             if (InstallDate.AddDays(LicenseDays) < DateTime.Now)
             {
                 Availability = false;

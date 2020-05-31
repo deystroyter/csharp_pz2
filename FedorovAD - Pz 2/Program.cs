@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System;
 using System.Runtime.InteropServices;
+using System.Xml.Serialization;
+
 
 namespace FedorovAD___Pz_2
 {
@@ -16,6 +18,8 @@ namespace FedorovAD___Pz_2
             using (var FStream = new FileStream(Path.Combine(FilePath, "input.txt"), FileMode.Open))
             using (var SReader = new StreamReader(FStream))
             {
+                var LogStream = new FileStream(Path.Combine(FilePath, "XMLSerialization.txt"), FileMode.Create);
+                var SSerializer = new SoftSerializer();
                 int n = int.Parse(SReader.ReadLine());
                 Software[] SoftDataBase = new Software[n];
 
@@ -24,6 +28,8 @@ namespace FedorovAD___Pz_2
                     string recordingLine = SReader.ReadLine();
                     Software record = GetRecordType(recordingLine);
                     SoftDataBase[i] = record;
+                    SSerializer.Serialize(LogStream, record);
+
                 }
                 FindFullSoft(SoftDataBase);
                 FindAvailableSoft(SoftDataBase);
