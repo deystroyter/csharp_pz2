@@ -1,0 +1,7 @@
+D:\Andrey\Polytech\!6 sem\C# (6 sem)\Pz 2\FedorovAD - Pz 2\FedorovAD - Pz 2\bin\Debug\FedorovAD - Pz 2.exe.config
+D:\Andrey\Polytech\!6 sem\C# (6 sem)\Pz 2\FedorovAD - Pz 2\FedorovAD - Pz 2\bin\Debug\FedorovAD - Pz 2.exe
+D:\Andrey\Polytech\!6 sem\C# (6 sem)\Pz 2\FedorovAD - Pz 2\FedorovAD - Pz 2\bin\Debug\FedorovAD - Pz 2.pdb
+D:\Andrey\Polytech\!6 sem\C# (6 sem)\Pz 2\FedorovAD - Pz 2\FedorovAD - Pz 2\obj\Debug\FedorovAD - Pz 2.csprojAssemblyReference.cache
+D:\Andrey\Polytech\!6 sem\C# (6 sem)\Pz 2\FedorovAD - Pz 2\FedorovAD - Pz 2\obj\Debug\FedorovAD - Pz 2.csproj.CoreCompileInputs.cache
+D:\Andrey\Polytech\!6 sem\C# (6 sem)\Pz 2\FedorovAD - Pz 2\FedorovAD - Pz 2\obj\Debug\FedorovAD - Pz 2.exe
+D:\Andrey\Polytech\!6 sem\C# (6 sem)\Pz 2\FedorovAD - Pz 2\FedorovAD - Pz 2\obj\Debug\FedorovAD - Pz 2.pdb
